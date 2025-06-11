@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bebida Express: Compra bebidas alcohólicas en Trujillo, La Libertad con entrega rápida y segura.">
+    <meta name="keywords" content="bebidas, Trujillo, alcohol, cervezas, vinos, pisco, entrega rápida">
+    <title>Bebida Express</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="notification" style="display: none; position: fixed; top: 10px; right: 10px; background: #333; color: #fff; padding: 10px; border-radius: 5px; z-index: 1000; transition: opacity 0.3s ease-in-out; opacity: 0;"></div>
+    <header>
+        <div class="logo" onclick="showSection('hero')">Bebida Express</div>
+        <nav>
+            <a href="#" onclick="showSection('catalog')">Catálogo</a>
+            <a href="#">Ofertas</a>
+            <a href="#" onclick="showSection('about')">Sobre Nosotros</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Busca bebidas..." onkeyup="searchProducts()" aria-label="Buscar productos">
+            <button onclick="searchProducts()" aria-label="Buscar">🔍</button>
+        </div>
+        <div class="user-actions">
+            <a href="#">Trujillo, La Libertad</a>
+            <a href="#">🔔</a>
+            <a href="#" onclick="showSection('cart')" aria-label="Ver carrito">🛒</a>
+        </div>
+    </header>
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Bebidas de Calidad a tu Puerta</h1>
+            <p>Descubre nuestro catálogo de bebidas alcohólicas en Trujillo. Entrega rápida, productos exclusivos y recomendaciones personalizadas.</p>
+            <div class="hero-buttons">
+                <button onclick="showSection('catalog')">Explorar Catálogo</button>
+                <button>Ver Ofertas del Día</button>
+            </div>
+            <div class="hero-features">
+                <span><img src="https://img.icons8.com/ios-filled/24/000000/clock.png" alt="Entrega"> Entrega en 30min</span>
+                <span><img src="https://img.icons8.com/ios-filled/24/000000/delivery.png" alt="Envío"> Envío Gratis</span>
+                <span><img src="https://img.icons8.com/ios-filled/24/000000/lock.png" alt="Seguro"> 100% Seguro</span>
+            </div>
+            <div class="hero-image">
+                <img src="img/BallantinesFinest.jpg" alt="Producto Destacado" loading="lazy">
+                <span class="new-tag">NUEVO</span>
+            </div>
+        </div>
+    </section>
+    <div class="featured-products-carousel" id="featured-products-carousel">
+        <div><img src="img/pilsenCallao.jpg" alt="Pilsen Callao" loading="lazy"><p>Pilsen Callao - S/ 6.00</p></div>
+        <div><img src="img/CervezaTrujillo.jpg" alt="Cerveza Trujillo" loading="lazy"><p>Cerveza Trujillo - S/ 6.20</p></div>
+        <div><img src="img/VodkaSmirnoff.jpg" alt="Vodka Smirnoff" loading="lazy"><p>Vodka Smirnoff - S/ 59.90</p></div>
+        <div><img src="img/PiscoVargas.jpg" alt="Pisco Vargas" loading="lazy"><p>Pisco Vargas - S/ 25.90</p></div>
+    </div>
+    <section class="why-choose" id="why-choose">
+        <h2>¿Por qué elegir Bebida Express?</h2>
+        <p class="why-choose-subtitle">Ofrecemos una excelente experiencia de compra de bebidas alcohólicas en línea, con tecnología de punta y un servicio excepcional.</p>
+        <div class="why-choose-grid">
+            <div class="why-choose-item">
+                <div class="icon-circle"><img src="https://img.icons8.com/ios-filled/24/000000/tracking.png" alt="Tracking"></div>
+                <h3>Tracking en Tiempo Real</h3>
+                <p>Sigue tu pedido desde la tienda hasta tu puerta con actualizaciones en vivo.</p>
+            </div>
+            <div class="why-choose-item">
+                <div class="icon-circle"><img src="https://img.icons8.com/ios-filled/24/000000/star.png" alt="Marcas"></div>
+                <h3>Marcas Locales</h3>
+                <p>Apoyamos productores peruanos con una selección exclusiva de bebidas artesanales.</p>
+            </div>
+            <div class="why-choose-item">
+                <div class="icon-circle"><img src="https://img.icons8.com/ios-filled/24/000000/delivery.png" alt="Entrega"></div>
+                <h3>Entrega Express</h3>
+                <p>Recibe tus bebidas en 30 minutos o menos en toda la zona metropolitana de Trujillo.</p>
+            </div>
+            <div class="why-choose-item">
+                <div class="icon-circle"><img src="https://img.icons8.com/ios-filled/24/000000/credit-card.png" alt="Pagos"></div>
+                <h3>Pagos Seguros</h3>
+                <p>Acepta Yape, Plin, Mercado Pago y tarjetas con la máxima seguridad.</p>
+            </div>
+            <div class="why-choose-item">
+                <div class="icon-circle"><img src="https://img.icons8.com/ios-filled/24/000000/lock.png" alt="Verificación"></div>
+                <h3>Verificación de Edad</h3>
+                <p>Sistema robusto de verificación para cumplir con todas las regulaciones legales.</p>
+            </div>
+        </div>
+    </section>
+    <section class="catalog" id="catalog" style="display: none;">
+        <h2>Catálogo de Bebidas</h2>
+        <p>Explora una amplia selección de bebidas alcohólicas</p>
+        <div class="catalog-filters">
+            <button onclick="filterProducts('all')">Todo</button>
+            <button onclick="filterProducts('a-z')">Nombre A-Z</button>
+            <button onclick="filterProducts('z-a')">Nombre Z-A</button>
+        </div>
+        <div class="catalog-content">
+            <div class="product-grid" id="product-grid">
+                <!-- Cerveza -->
+                <div class="product-item" data-name="Pilsen Callao" data-price="6.0" data-category="Cerveza">
+                    <img src="img/pilsenCallao.jpg" alt="Botella de cerveza Pilsen Callao 330ml" loading="lazy">
+                    <p>Pilsen Callao <span>4.0⭐</span></p>
+                    <p>S/ 6.00</p>
+                    <button class="add-to-cart">Añadir</button>
+                </div>
+                <div class="product-item" data-name="Cerveza Trujillo" data-price="6.2" data-category="Cerveza">
+                    <img src="img/CervezaTrujillo.jpg" alt="Botella de cerveza Trujillo 330ml" loading="lazy">
+                    <p>Cerveza Trujillo <span>4.1⭐</span></p>
+                    <p>S/ 6.20</p>
+                    <button class="add-to-cart">Añadir</button>
+                </div>
+                <div class="product-item" data-name="Cerveza Cusqueña Negra" data-price="5.5" data-category="Cerveza">
+                    <img src="img/CusquenaNegra.jpg" alt="Botella de Cusqueña Negra 330ml" loading="lazy">
+                    <p>Cerveza Callao <span>4.0⭐</span></p>
+                    <p>S/ 5.50</p>
+                    <button class="add-to-cart">Añadir</button>
+                </div>
+                <div class="product-item" data-name="Cerveza Cusqueña Dorada" data-price="5.5" data-category="Cerveza">
+                    <img src="img/CusquenaDorada.jpg" alt="Botella de cerveza Cusqueña Dorada 330ml" loading="lazy">
+                    <p>Cerveza Cusqueña Dorada <span>4.2⭐</span></p>
+                    <p>S/ 5.50</p>
+                    <button class="add-to-cart">Añadir</button>
+                </div>
+                <div class="product-item" data-name="Cerveza Heineken" data-price="5.5" data-category="Cerveza">
+                    <img src="img/heineken.jpg" alt="Botella de cerveza Heineken 330ml" loading="lazy">
+                    <p>Cerveza Heineken <span>4.3⭐</span></p>
+                    <p>S/ 5.50</p>
+                    <button class="add-to-cart">Añadir</button>
+                </div>
+                <div class="product-item" data-name="Cerveza Corona" data-price="5.0" data-category="Cerveza">
+                    <img src="img/Corona.jpg" alt="Botella de cerveza Corona 355ml" loading="lazy">
+                    <p>Cerveza Corona <span>4.1⭐</span></p>
+                    <p>S/ 5.00</p>
+                    <button class="add-to-cart">Añadir</button>
+                </div>
+                <div class="product-item" data-name="Cerveza Golden" data-price="4.8" data-category="Cerveza">
+                    <img src="img/CervezaGold.jpg" alt="Botella de cerveza Golden 330ml" loading="lazy">
+                    <p>Cerveza Golden <span>4.0⭐</span></p>
+                    <p>S/ 4.80</p>
+                    <button class="add-to-cart">Añadir</button>
+                </div>
+                <div class="product-item" data-name="Vodka Smirnoff" data-price="59.9" data-category="Vodka">
+                    <img src="img/VodkaSmirnoff.jpg" alt="Botella de vodka Smirnoff 750ml" loading="lazy">
+                    <p>Vodka Smirnoff <span>4.4⭐</span></p>
+                    <p>S/ 59.90</p>
+                    <button class="add-to-cart">Añadir</button>
+                </div>
+                <div class="product-item" data-name="Vodka Absolut" data-price="44.9" data-category="Vodka">
+                    <img src="img/VodkaAbsolut.jpg" alt="Botella de vodka Absolut 750ml" loading="lazy">
+                    <p>Vodka Absolut <span>4.5⭐</span></p>
+                    <p>S/ 44.90</p>
+                    <button class="add-to-cart">Añadir</button>
+                </div>
+                <div class="product-item" data-name="Pisco Vargas Italia" data-price="25.9" data-category="Pisco">
+                    <img src="img/PiscoVargas.jpg" alt="Botella de pisco Vargas Italia 750ml" loading="lazy">
+                    <p>Pisco Vargas Italia <span>4.3⭐</span></p>
+                    <p>S/ 25.90</p>
+                    <button class="add-to-cart">Añadir</button>
+                </div>
+                <div class="product-item" data-name="Pisco Ocucaje Quebranta" data-price="29.9" data-category="Pisco">
+                    <img src="img/PiscoOcucaje.jpg" alt="Botella de pisco Ocucaje Quebranta 750ml" loading="lazy">
+                    <p>Pisco Ocucaje Quebranta <span>4.4⭐</span></p>
+                    <p>S/ 29.90</p>
+                    <button class="add-to-cart">Añadir</button>
+                </div>
+                <div class="product-item" data-name="Pisco Cuatro Gallos" data-price="84.9" data-category="Pisco">
+                    <img src="img/PiscoCuatroGallos.jpg" alt="Botella de pisco Cuatro Gallos 750ml" loading="lazy">
+                    <p>Pisco Cuatro Gallos <span>4.6⭐</span></p>
+                    <p>S/ 84.90</p>
+                    <button class="add-to-cart">Añadir</button>
+                </div>
+                <div class="product-item" data-name="Johnnie Walker Red Label" data-price="52.9" data-category="Whisky">
+                    <img src="img/RedLabel.jpg" alt="Botella de whisky Johnnie Walker Red Label 750ml" loading="lazy">
+                    <p>Johnnie Walker Red Label <span>4.5⭐</span></p>
+                    <p>S/ 52.90</p>
+                    <button class="add-to-cart">Añadir</button>
+                </div>
+                <div class="product-item" data-name="Ballantine’s Finest" data-price="58.9" data-category="Whisky">
+                    <img src="img/BallantinesFinest1.jpg" alt="Botella de whisky Ballantine’s Finest 750ml" loading="lazy">
+                    <p>Ballantine’s Finest <span>4.4⭐</span></p>
+                    <p>S/ 58.90</p>
+                    <button class="add-to-cart">Añadir</button>
+                </div>
+                <div class="product-item" data-name="Tabernero Borgoña Semi-Seco" data-price="16.5" data-category="Vino">
+                    <img src="img/TaberneroBorgona.jpg" alt="Botella de vino Tabernero Borgoña Semi-Seco 750ml" loading="lazy">
+                    <p>Tabernero Borgoña Semi-Seco <span>4.2⭐</span></p>
+                    <p>S/ 16.50</p>
+                    <button class="add-to-cart">Añadir</button>
+                </div>
+                <div class="product-item" data-name="Altos del Sur Rosé" data-price="29.9" data-category="Vino">
+                    <img src="img/TaberneroRose.png" alt="Botella de vino Altos del Sur Rosé 750ml" loading="lazy">
+                    <p>Altos del Sur Rosé <span>4.3⭐</span></p>
+                    <p>S/ 29.90</p>
+                    <button class="add-to-cart">Añadir</button>
+                </div>
+                <div class="product-item" data-name="Torres Tempranillo" data-price="47.9" data-category="Vino">
+                    <img src="img/TorresTempranillo.jpg" alt="Botella de vino Torres Tempranillo 750ml" loading="lazy">
+                    <p>Torres Tempranillo <span>4.5⭐</span></p>
+                    <p>S/ 47.90</p>
+                    <button class="add-to-cart">Añadir</button>
+                </div>
+            </div>
+            <div class="pagination" id="pagination"></div>
+        </div>
+    </section>
+    <section class="cart" id="cart" style="display: none;">
+        <h2>Carrito de Compras</h2>
+        <div class="cart-container">
+            <div class="cart-items" id="cart-items"></div>
+            <div class="cart-right">
+                <div class="cart-summary">
+                    <h3>Resumen del Pedido</h3>
+                    <p>Subtotal: <span id="subtotal">S/ 0.00</span></p>
+                    <p>Envío: <span id="shipping">Gratis</span></p>
+                    <p>Total: <span id="total">S/ 0.00</span></p>
+                    <button id="proceed-payment">Proceder al Pago</button>
+                </div>
+                <div class="discount">
+                    <h3>Código de Descuento</h3>
+                    <input type="text" id="discount-code" placeholder="Ingresa tu código">
+                    <button id="apply-discount">Aplicar</button>
+                </div>
+                <div class="offers">
+                    <h3>Ofertas Especiales!</h3>
+                    <p>Descubre más descuentos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="checkout" id="checkout" style="display: none;">
+        <h2>Finalizar Compra</h2>
+        <div class="checkout-container">
+            <div class="checkout-left">
+                <div class="checkout-section">
+                    <h3>Información del Cliente</h3>
+                    <p class="session-note">¿Ya tienes una cuenta? <button class="login-btn">Iniciar Sesión</button> para una experiencia más rápida</p>
+                    <label>Nombre completo</label>
+                    <input type="text" id="name" placeholder="Juan Pérez" required>
+                    <label>Correo electrónico</label>
+                    <input type="email" id="email" placeholder="juan@ejemplo.com" required>
+                    <label>Teléfono</label>
+                    <input type="tel" id="phone" placeholder="999 123 456" required>
+                </div>
+                <div class="checkout-section">
+                    <h3>Dirección de Entrega</h3>
+                    <label>Dirección completa</label>
+                    <input type="text" id="address" placeholder="Av. España 123, Apto 4B" required>
+                    <label>Distrito</label>
+                    <input type="text" id="district" placeholder="Trujillo" required>
+                    <label>Referencia (opcional)</label>
+                    <input type="text" id="reference" placeholder="Casa azul, cerca al parque">
+                </div>
+                <div class="checkout-section payment-section" id="payment-section">
+                    <h3>Método de Pago</h3>
+                    <div class="payment-option">
+                        <input type="radio" name="payment-method" value="card" id="card" required>
+                        <label for="card">Tarjeta de Crédito/Débito</label>
+                        <div class="card-details" style="display: none;">
+                            <div class="payment-field">
+                                <label>Número de Tarjeta</label>
+                                <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                            </div>
+                            <div class="payment-fields-row">
+                                <div class="payment-field">
+                                    <label>Nombre en la Tarjeta</label>
+                                    <input type="text" id="card-name" placeholder="Juan Pérez" required>
+                                </div>
+                                <div class="payment-field">
+                                    <label>Vencimiento</label>
+                                    <input type="text" id="expiry-date" placeholder="MM/AA" required>
+                                </div>
+                                <div class="payment-field">
+                                    <label>CVV</label>
+                                    <input type="text" id="cvv" placeholder="123" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" name="payment-method" value="yape" id="yape">
+                        <label for="yape">Yape</label>
+                        <span class="payment-icon" style="background: #e6b3ff;">💜</span>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" name="payment-method" value="plin" id="plin">
+                        <label for="plin">Plin</label>
+                        <span class="payment-icon" style="background: #b3e6ff;">💙</span>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" name="payment-method" value="cash" id="cash">
+                        <label for="cash">Efectivo contra entrega</label>
+                        <span class="payment-icon" style="background: #ccffcc;">💚</span>
+                    </div>
+                </div>
+                <button id="confirm-payment">Pagar S/ <span id="final-total">0.00</span></button>
+            </div>
+            <div class="checkout-right">
+                <div class="checkout-section">
+                    <h3>Resumen del Pedido</h3>
+                    <div class="order-summary" id="order-summary"></div>
+                    <p>Subtotal: <span id="checkout-subtotal">S/ 0.00</span></p>
+                    <p>Envío: <span id="checkout-shipping">Gratis</span></p>
+                    <p>Total: <span id="checkout-total">S/ 0.00</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about" id="about" style="display: none;">
+        <h2>Sobre Nosotros</h2>
+        <p>Bebida Express es tu plataforma líder para la venta y compra de bebidas alcohólicas en Perú. Fundada con la misión de ofrecer una experiencia única, nos especializamos en una amplia variedad de cervezas, vinos, piscos, vodkas, whiskies y más, con entrega rápida y segura a tu puerta.</p>
+        <div class="about-content">
+            <div class="about-section">
+                <h3>Nuestra Historia</h3>
+                <p>Iniciamos operaciones en 2025 en Trujillo, La Libertad, con el objetivo de revolucionar la forma en que los peruanos acceden a sus bebidas favoritas. Desde entonces, hemos crecido gracias a la confianza de nuestros clientes y nuestro compromiso con la calidad.</p>
+                <div class="image-placeholder">
+                    <img src="img/descarga.jpg" width="390" height="150">
+                </div>
+            </div>
+            <div class="about-section">
+                <h3>Misión y Visión</h3>
+                <p>Nuestra misión es brindar productos de alta calidad con un servicio excepcional. Aspiramos a ser la plataforma de bebidas más confiable y accesible en toda América Latina, expandiendo nuestra presencia año tras año.</p>
+                <div class="image-placeholder">
+                    <img src="img/Consumo-responsable.jpeg" width="390" height="150">
+                </div>
+            </div>
+            <div class="about-section">
+                <h3>Compromiso</h3>
+                <p>Nos comprometemos con el consumo responsable y la verificación de edad. Además, trabajamos con proveedores locales para apoyar la economía peruana y ofrecerte lo mejor de nuestra cultura.</p>
+                <div class="image-placeholder">
+                    <img src="img/BeberResponsable.webp" width="390" height="150">
+                </div>
+            </div>
+        </div>
+        <div class="video-container">
+            <h3>Nuestra Historia en Video</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/R9bSRC7LJZg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="reasons">
+            <div><span>⏱️</span> Tracking en Tiempo Real</div>
+            <div><span>🏷️</span> Variedad de Productos</div>
+            <div><span>✅</span> Verificación de Edad</div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Bebida Express</h3>
+                <p>Trujillo, La Libertad, Perú</p>
+            </div>
+            <div class="footer-section">
+                <h3>Productos</h3>
+                <a href="#">Pisco</a>
+                <a href="#">Vinos</a>
+                <a href="#">Cervezas</a>
+                <a href="#">Licores</a>
+            </div>
+            <div class="footer-section">
+                <h3>Empresa</h3>
+                <a href="#">Sobre Nosotros</a>
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Política de Privacidad</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Tel: +51 44 123 456</p>
+                <p>Email: info@bebidaexpress.pe</p>
+            </div>
+        </div>
+        <p class="footer-note">© 2025 Bebida Express. Todos los derechos reservados. Consumo responsable. Prohibida la venta a menores de 19 años.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
