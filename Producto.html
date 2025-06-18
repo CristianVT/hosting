@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bebidas Express - Productos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html#inicio" style="color: #d4af37; text-decoration: none;">
+                        <i class="fas fa-wine-bottle"></i>
+                        <span>Bebidas Express</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="index.html#caracteristicas">Características</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                    <li><a href="Carrito.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> (0)</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Productos Section -->
+    <section id="productos" class="productos">
+        <div class="container">
+            <h2>Nuestros Productos</h2>
+            <div class="productos-grid">
+                <div class="producto-card">
+                    <div class="producto-image">
+                        <img src="img/CervezaHeineken.png" alt="Heineken">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Heineken</h3>
+                        <p>Cerveza - Lata 330ml</p>
+                        <div class="precio-agregar">
+                            <span class="precio">S/ 5.50</span>
+                            <button class="btn-agregar-pro" data-product="Heineken" data-price="5.50" data-image="img/CervezaHeineken.png">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <div class="producto-image">
+                        <img src="img/Corona.png" alt="Corona">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Corona</h3>
+                        <p>Cerveza - Botella 330ml</p>
+                        <div class="precio-agregar">
+                            <span class="precio">S/ 5.00</span>
+                            <button class="btn-agregar-pro" data-product="Corona" data-price="5.00" data-image="img/Corona.png">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <div class="producto-image">
+                        <img src="img/Cusquenadorada.jpg" alt="Cusqueña Dorada">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Cusqueña Dorada</h3>
+                        <p>Cerveza - Botella 330ml</p>
+                        <div class="precio-agregar">
+                            <span class="precio">S/ 5.50</span>
+                            <button class="btn-agregar-pro" data-product="Cusqueña Dorada" data-price="5.50" data-image="img/CusqueñaDorada.jpg">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <div class="producto-image">
+                        <img src="img/JohnnieWalkerRedLabel.png" alt="Johnnie Walker Red Label">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Johnnie Walker Red Label</h3>
+                        <p>Whisky - Botella 750ml</p>
+                        <div class="precio-agregar">
+                            <span class="precio">S/ 52.90</span>
+                            <button class="btn-agregar-pro" data-product="Johnnie Walker Red Label" data-price="52.90" data-image="img/JohnnieWalkerRedLabel.png">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <div class="producto-image">
+                        <img src="img/PilsenCallao.jpg" alt="Pilsen Callao">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Pilsen Callao</h3>
+                        <p>Cerveza - Botella 620ml</p>
+                        <div class="precio-agregar">
+                            <span class="precio">S/ 6.00</span>
+                            <button class="btn-agregar-pro" data-product="Pilsen Callao" data-price="6.00" data-image="img/PilsenCallao.jpg">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <div class="producto-image">
+                        <img src="img/PilsenTrujillo.jpg" alt="Pilsen Trujillo">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Pilsen Trujillo</h3>
+                        <p>Cerveza - Botella 620ml</p>
+                        <div class="precio-agregar">
+                            <span class="precio">S/ 6.20</span>
+                            <button class="btn-agregar-pro" data-product="Pilsen Trujillo" data-price="6.20" data-image="img/PilsenTrujillo.jpg">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <div class="producto-image">
+                        <img src="img/PiscoCuatroGallos.png" alt="Cuatro Gallos">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Cuatro Gallos</h3>
+                        <p>Pisco - Quebranta 700ml</p>
+                        <div class="precio-agregar">
+                            <span class="precio">S/ 84.90</span>
+                            <button class="btn-agregar-pro" data-product="Cuatro Gallos" data-price="84.90" data-image="img/PiscoCuatroGallos.png">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <div class="producto-image">
+                        <img src="img/TaberneroBorgoñaSemi‑Seco.png" alt="Tabernero Borgoña Semi-Seco">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Tabernero Borgoña Semi-Seco</h3>
+                        <p>Vino - Botella 750ml</p>
+                        <div class="precio-agregar">
+                            <span class="precio">S/ 16.50</span>
+                            <button class="btn-agregar-pro" data-product="Tabernero Borgoña Semi-Seco" data-price="16.50" data-image="img/TaberneroBorgoñaSemi-Seco.png">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <div class="producto-image">
+                        <img src="img/VodkaAbsolut.png" alt="Absolut Vodka">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Absolut Vodka</h3>
+                        <p>Vodka - Botella 700ml</p>
+                        <div class="precio-agregar">
+                            <span class="precio">S/ 44.90</span>
+                            <button class="btn-agregar-pro" data-product="Absolut Vodka" data-price="44.90" data-image="img/VodkaAbsolut.png">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card">
+                    <div class="producto-image">
+                        <img src="img/VoVodkaSmirnoff.png" alt="Smirnoff Vodka">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Smirnoff Vodka</h3>
+                        <p>Vodka - Botella 700ml</p>
+                        <div class="precio-agregar">
+                            <span class="precio">S/ 59.90</span>
+                            <button class="btn-agregar-pro" data-product="Smirnoff Vodka" data-price="59.90" data-image="img/VodkaSmirnoff.png">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paginación -->
+            <div class="pagination">
+                <button class="page-btn">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <a href="index.html#inicio" style="color: #d4af37; text-decoration: none;">
+                            <i class="fas fa-wine-bottle"></i>
+                            <span>Bebidas Express</span>
+                        </a>
+                    </div>
+                    <p>La plataforma que conecta tiendas locales de licores con consumidores, apoyando el comercio local.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Navegación</h3>
+                    <ul>
+                        <li><a href="index.html#inicio">Inicio</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="index.html#nosotros">Nosotros</a></li>
+                        <li><a href="index.html#caracteristicas">Características</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Bebidas Express. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
